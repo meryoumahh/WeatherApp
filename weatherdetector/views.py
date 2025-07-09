@@ -9,7 +9,7 @@ def index(request):
     if request.method == 'POST':
         # Handle form submission or other POST logic here
         city = request.POST.get('city')
-        res = urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=a5b1d4af5726e8af7ac860098c6082b6').read()
+        res = urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=API_KEY').read()
         json_data = json.loads(res)
         data = {
             'city': city,
